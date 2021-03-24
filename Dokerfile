@@ -9,7 +9,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # copy the content of the local src directory to the working directory
-COPY power_plant/ .
+COPY Coding-Challenge/ .
 
 # command to run on container start
 CMD [ "python", "./app.py" ]
