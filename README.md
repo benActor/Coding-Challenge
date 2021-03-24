@@ -1,20 +1,20 @@
 # Coding-Challenge
 
-##Description 
+## Description 
 This Code Implements an API to Solve powerplant-coding-challenge.
 
 The API is developped using FLASK.
 
-##Execution 
+## Execution 
 To launch the Api pull the 
 
 **pull the code and move to directory coding-challenge**
 **run pip install -r requirements.txt**
 **run python app.py**
 
--The API exposes a route for POST REQUEST at /productionplan
+- The API exposes a route for POST REQUEST at /productionplan
 
--Parameters to be passed as JSON-DOCUMENT with the following structure
+- Parameters to be passed as JSON-DOCUMENT with the following structure
 
 {
   "load": float,
