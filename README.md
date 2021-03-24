@@ -9,7 +9,9 @@ The API is developped using FLASK.
 To launch the Api pull the 
 
 **pull the code and move to directory coding-challenge**
+
 **run pip install -r requirements.txt**
+
 **run python app.py**
 
 - The API exposes a route for POST REQUEST at /productionplan
