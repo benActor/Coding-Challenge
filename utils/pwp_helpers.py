@@ -63,7 +63,7 @@ def pwp_cost(power_plant_json, fuels_json, types):
     return 0
 
 
-def total_pmax_pwp_set(pwp_set, fuels_json):
+def total_pmax_pwp_set(pwp_set, fuels_json, types):
     """
 
     :param pwp_set:
@@ -73,22 +73,20 @@ def total_pmax_pwp_set(pwp_set, fuels_json):
     if pwp_set == []:
         return 0
     else:
-        return pwp_pmax(first_of(pwp_set), fuels_json) + total_pmax_pwp_set(rest_of(pwp_set), fuels_json)
+        return pwp_pmax(first_of(pwp_set), fuels_json, types) + total_pmax_pwp_set(rest_of(pwp_set), fuels_json, types)
 
 
-def total_cost(pwp_set, fuels_json):
+def total_cost(pwp_set, fuels_json, types):
     if pwp_set == []:
         return 0
     else:
-        return pwp_cost(first_of(pwp_set), fuels_json) + total_cost(rest_of(pwp_set), fuels_json)
+        return pwp_cost(first_of(pwp_set), fuels_json, types) + total_cost(rest_of(pwp_set), fuels_json, types)
 
 
-def pmax_over_cost(pwp_set, fuels_json):
-    return total_pmax_pwp_set(pwp_set, fuels_json)/total_cost(pwp_set, fuels_json)
+def pmax_over_cost(pwp_set, fuels_json, types):
+    return total_pmax_pwp_set(pwp_set, fuels_json, types)/total_cost(pwp_set, fuels_json, types)
 
 
-def is_equivalent(margin, load, target_load):
-    pass
 
 
 print(min([1, 2, 3, 5, 9, 21, 18], key=lambda x:abs(x-15)))
